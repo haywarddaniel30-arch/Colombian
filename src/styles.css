@@ -1,11 +1,58 @@
+:root {
+    --colombia-yellow: #FFD600;
+    --colombia-blue: #0033A0;
+    --colombia-red: #EF3340;
+    --colombia-black: #101010;
+    --colombia-white: #FFF;
+}
+
 body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
+    background: var(--colombia-yellow);
+    color: var(--colombia-black);
+}
+
+header {
+    background: var(--colombia-yellow);
+    color: var(--colombia-black);
+    padding: 24px 0 8px 0;
+    border-bottom: 8px solid var(--colombia-blue);
+}
+
+footer {
+    background: var(--colombia-blue);
+    color: var(--colombia-white);
+    padding: 12px 0;
+    border-top: 8px solid var(--colombia-red);
+    text-align: center;
+}
+
+select, button {
+    background: var(--colombia-blue);
+    color: var(--colombia-white);
+    border: none;
+    border-radius: 4px;
+    padding: 8px 18px;
+    font-size: 1rem;
+    margin: 9px;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+button:hover, select:focus {
+    background: var(--colombia-red);
+    color: var(--colombia-white);
 }
 .skeleton-loader {
-    background-color: #ccc;
-    height: 20px;
+    background-color: #eee;
+    height: 18px;
     width: 100%;
     margin: 10px 0;
+    border-radius: 7px;
+    animation: pulse 1s infinite alternate;
+}
+@keyframes pulse {
+    0% { background-color: #f3f3f3; }
+    100% { background-color: #FFE066; }
 }
